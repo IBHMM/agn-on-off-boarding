@@ -10,7 +10,7 @@
 ### 1. Navigate to the Next.js directory
 
 ```bash
-cd nextjs/nextjs
+cd nextjs
 ```
 
 ### 2. Install Dependencies

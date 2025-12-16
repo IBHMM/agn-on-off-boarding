@@ -7,7 +7,7 @@ import { FaPlus, FaTrash, FaCheckCircle, FaClock, FaFilter, FaUser, FaBriefcase,
 import AddWorkModal from './AddWorkModal';
 import styles from './Dashboard.module.css';
 
-const CREATORS = ['ibrahim', 'asiman', 'Ilqar', 'taleh', 'elvin', 'Eli'];
+const CREATORS = ['Ibrahim', 'Asiman', 'Ilqar', 'Elvin', 'Canəli'];
 const WORK_TYPES = [
   'Yeni_İşçi_Üçün_Onboarding',
   'İşçi_İşdən_Çıxdıqda_Offboarding'
