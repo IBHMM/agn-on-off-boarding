@@ -1,0 +1,384 @@
+.dashboardContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dashboardHeader h1 {
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.addWorkBtn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addWorkBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.jobsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.jobCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  padding-bottom: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.jobCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.jobCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-right: 0;
+}
+
+.jobCardHeader h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jobCardBody {
+  color: #666;
+}
+
+.workType {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 8px;
+}
+
+.createdBy {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.createdDate {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.progressInfo {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deleteBtn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deleteBtn:hover {
+  background: #d32f2f;
+  transform: scale(1.05);
+}
+
+.noJobs {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  color: #666;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.filtersSection {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 180px;
+}
+
+.filterGroup label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filterSelect {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  background: white;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filterSelect:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.clearFiltersBtn {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.clearFiltersBtn:hover {
+  background: #e0e0e0;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  color: white;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    padding: 0px;
+  }
+
+  .dashboardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+  }
+
+  .dashboardHeader h1 {
+    font-size: 1.2rem;
+  }
+
+  .addWorkBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .filtersSection {
+    flex-direction: column;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .filterGroup {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .filterSelect {
+    width: 100%;
+  }
+
+  .clearFiltersBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .jobsGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .jobCard {
+    padding: 15px;
+    padding-bottom: 50px;
+  }
+
+  .jobCardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .jobCardHeader h3 {
+    font-size: 1rem;
+  }
+
+  .statusBadge {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  .workType {
+    font-size: 0.9rem;
+  }
+
+  .createdBy,
+  .createdDate {
+    font-size: 0.85rem;
+  }
+
+  .progressInfo {
+    font-size: 0.85rem;
+  }
+
+  .deleteBtn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .noJobs {
+    padding: 40px 15px;
+    font-size: 0.9rem;
+  }
+
+  .loading {
+    padding: 40px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardContainer {
+    padding: 8px;
+  }
+
+  .dashboardHeader {
+    padding: 12px 15px;
+  }
+
+  .dashboardHeader h1 {
+    font-size: 1.1rem;
+  }
+
+  .addWorkBtn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .filtersSection {
+    padding: 12px;
+  }
+
+  .filterGroup label {
+    font-size: 0.8rem;
+  }
+
+  .filterSelect {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .jobCard {
+    padding: 12px;
+    padding-bottom: 45px;
+  }
+
+  .jobCardHeader h3 {
+    font-size: 0.95rem;
+  }
+
+  .deleteBtn {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+}
+

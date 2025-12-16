@@ -1,0 +1,145 @@
+{
+    "IT_Onboarding_Proseduru": {
+      "Yeni_İşçi_Üçün_Onboarding": {
+        "HR_dan_Alınan_Məlumatlar": [
+          "Şöbə",
+          "Foto şəkil",
+          "Doğum tarixi",
+          "FIN nömrə"
+        ],
+        "HR_Məlumatlarının_Emalı": [
+          "Struktur siyahısına əlavə olunur",
+          "Doğum günü struktura əlavə edilir"
+        ],
+        "Fərdi_İdentifikasiya_və_Təhlükəsizlik_Sistemləri": {
+          "Birka": [
+            "Corel Draw ilə hazırlanır",
+            "İnzibati şöbəyə təhvil verilir"
+          ],
+          "IVMS_Face_Control": [
+            "IVMS sisteminə əlavə olunur",
+            "Üz tanıma (Face) qeydiyyatı aparılır"
+          ]
+        },
+        "Active_Directory_AD": [
+          "Yeni istifadəçi yaradılır",
+          "Aid olduğu şöbə qrupuna əlavə edilir",
+          "file_srv_users qrupuna əlavə edilir",
+          "Vəzifə, mail və digər məlumatlar qeyd olunur"
+        ],
+        "Mail_Zimbra": [
+          "Yeni mail açılır",
+          "Mail All Staff-a əlavə edilir",
+          "Manager (rəhbərdirsə) siyahısına salınır"
+        ],
+        "File_Server": [
+          "İstifadəçiyə xüsusi folder açılır",
+          "İcazələr konfiqurasiya edilir"
+        ],
+        "Komputerin_Hazırlanması": {
+          "Disk_və_Sistem": [
+            "Disklər bölünür",
+            "LAN kabel çıxarılır Shift+F10 in Command Prompt + OOBE\\BYPASSNRO ilə User açılır",
+            "Ümumi Windows updateləri edilir",
+            "D diski yaradılır"
+          ],
+          "Domen_və_İnventar": [
+            "Computer adı verilir",
+            "İnventarda və Snipe`da istifadəçi yaradılır inventarlar adına əlavə edilir",
+            "Domenə qoşulur"
+          ],
+          "SCCM": [
+            "User Trend Micro qrupundan çıxarılır öz qrupuna əlavə edilir",
+            "All_Workstation qrupuna salınır",
+            "SCCM-də client install (2-ci və 3-cü seçim) edilir",
+            "Software Center-də proqramlar yüklənilir",
+            "Lisenziyalar aktiv edilir"
+          ],
+          "UI_Shortcut_və_Struktur": [
+            "Desktop ikonlar ekranda aktivləşdirilir",
+            "Map drive edilib / File Server ekrana əlavə edilir",
+            "Adobe + Chrome və digər proqramlar default edilir",
+            "Taskbar tənzimlənir",
+            "Yazı şriftləri install edilir",
+            "Proqram shortcutları desktopa əlavə olunur"
+          ],
+          "Trend_Micro": [
+            "Desktop Azgerneft qrupuna əlavə edilməlidir"
+          ],
+          "Printer": [
+            "Printer adı yazılıb İnventar siyahısına salınır"
+          ]
+        },
+        "Outlook_Konfiqurasiya": [
+          "LDAP: dcp01, dcp02 əlavə edilir Custom seçilir",
+          "Signature düzəldilir",
+          "Display Name düzəldilir",
+          "Read & Delivery seçimləri edilir",
+          "Test mail: s.desk@azgerneft.com göndərilir"
+        ],
+        "VPN_Varsa": [
+          "FortiClient yüklənir",
+          "Network admini user açır",
+          "User Config edilir",
+          "AD-də RDP_users qrupuna əlavə olunur",
+          "RDP shortcut ekrana atılır"
+        ],
+        "SAP_Varsa": [
+          "SAP yüklənir",
+          "Config edilir",
+          "Fiori əlavə olunur",
+          "BKP51 – BKQ52 çağırılır",
+          "Browserde Bookmark edilir"
+        ],
+        "IP_Telefon": [
+          "PBX-də user açılır",
+          "Nömrə verilir",
+          "Yeni IP telefon konfiqurasiya edilir",
+          "Siyahıya əlavə olunur",
+          "Siyahı çıxarılıb istifadəçiyə təhvil verilir"
+        ],
+        "Təhvil_Təslim": [
+          "Komputer hazırlanır",
+          "Port konfiqurasiya edilir",
+          "IP telefon quraşdırılır",
+          "2FA istifadəçinin yanında aktiv edilir",
+          "Printer qoşulur",
+          "VPN istifadəsi izah edilir",
+          "Ümumi Təlimatlar verilir"
+        ],
+        "Əlavələr": [
+          "Flash card / external disk verilirsə icazə verilir"
+        ]
+      },
+      "İşçi_İşdən_Çıxdıqda_Offboarding": {
+        "İdentifikasiya_və_Sistemlər": [
+          "Birka silinir",
+          "FIN siyahıdan silinir"
+        ],
+        "Snipe_Inventar_İdarəetmə": [
+          "Inventardan çıxarılır",
+          "Snipe-da silinir",
+          "Kiməsə verilibsə onun adına keçirilir",
+          "Yoxdursa İT anbara əlavə edilir"
+        ],
+        "AD_və_Sistem_Deaktivasiyası": [
+          "User disable edilir",
+          "Computer name AD və SCCM-dən silinir"
+        ],
+        "IVMS_Üz_Tanıma": [
+          "Üz tanıma silinir"
+        ],
+        "Zimbra_Mail": [
+          "Mail deaktiv edilir və ya silinir"
+        ],
+        "İnventar_Təhvili_və_Backup": [
+          "Bütün inventarlar təhvil alınır",
+          "Printer siyahısından çıxarılır",
+          "Port siyahısından çıxarılır",
+          "IP telefon reset edilir",
+          "Fayllar back up edilir"
+        ]
+      }
+    }
+  }
+
