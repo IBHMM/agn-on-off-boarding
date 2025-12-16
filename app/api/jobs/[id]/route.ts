@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
+import os from 'os';
 
-const JOBS_FILE = path.join(process.cwd(), 'data', 'jobs.json');
+const STORAGE_DIR = process.env.TMPDIR || os.tmpdir();
+const JOBS_FILE = path.join(STORAGE_DIR, 'jobs.json');
 
 async function initializeJobsFile() {
   try {
@@ -78,4 +80,3 @@ export async function DELETE(
     return NextResponse.json({ error: 'Failed to delete job' }, { status: 500 });
   }
 }
-
