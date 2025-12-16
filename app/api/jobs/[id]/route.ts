@@ -16,13 +16,14 @@ async function initializeJobsFile() {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     await initializeJobsFile();
     const data = await fs.readFile(JOBS_FILE, 'utf8');
     const jobs = JSON.parse(data);
-    const job = jobs.find((j: any) => j.id === params.id);
+    const job = jobs.find((j: any) => j.id === id);
     
     if (!job) {
       return NextResponse.json({ error: 'Job not found' }, { status: 404 });
@@ -37,13 +38,14 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     await initializeJobsFile();
     const data = await fs.readFile(JOBS_FILE, 'utf8');
     const jobs = JSON.parse(data);
-    const jobIndex = jobs.findIndex((j: any) => j.id === params.id);
+    const jobIndex = jobs.findIndex((j: any) => j.id === id);
     
     if (jobIndex === -1) {
       return NextResponse.json({ error: 'Job not found' }, { status: 404 });
@@ -61,13 +63,14 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     await initializeJobsFile();
     const data = await fs.readFile(JOBS_FILE, 'utf8');
     let jobs = JSON.parse(data);
-    jobs = jobs.filter((j: any) => j.id !== params.id);
+    jobs = jobs.filter((j: any) => j.id !== id);
     await fs.writeFile(JOBS_FILE, JSON.stringify(jobs, null, 2));
     return NextResponse.json({ success: true });
   } catch (error) {
